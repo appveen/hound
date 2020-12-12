@@ -14,7 +14,7 @@ module.exports = {
 		},
 		"appcenter": {
 			"url": process.env.MONGO_APPCENTER_URL || 'mongodb://localhost:27017',
-			"dbName": process.env.MONGO_APPCENTER_DBNAME || "appveen-adam",
+			"dbName": process.env.MONGO_APPCENTER_DBNAME || "appveen-Adam",
 			"collection": process.env.MONGO_APPCENTER_COLLECTION || "counters"
 		},
 		"logs": {
