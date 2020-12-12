@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hound
+  namespace: __namespace__
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hound
+  template:
+    metadata:
+      labels:
+        app: hound
+    spec:
+      containers:
+        - name: hound
+          image: '__docker_registry_server__/appveen:hound.1.0.0'
+          envFrom:
+          - configMapRef:
+              name: config
