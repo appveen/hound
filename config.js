@@ -9,21 +9,24 @@ module.exports = {
 	"db": {
 		"author": {
 			"url": process.env.MONGO_AUTHOR_URL || 'mongodb://localhost:27017',
-			"dbName": process.env.MONGO_AUTHOR_DBNAME || "odpConfig"
+			"dbName": process.env.MONGO_AUTHOR_DBNAME || "odpConfig",
+			"collection": process.env.MONGO_AUTHOR_COLLECTION || "counters"
 		},
 		"appcenter": {
 			"url": process.env.MONGO_APPCENTER_URL || 'mongodb://localhost:27017',
-			"dbName": process.env.MONGO_APPCENTER_DBNAME || "appveen-adam"
+			"dbName": process.env.MONGO_APPCENTER_DBNAME || "appveen-adam",
+			"collection": process.env.MONGO_APPCENTER_COLLECTION || "counters"
 		},
 		"logs": {
 			"url": process.env.MONGO_LOGS_URL || 'mongodb://localhost:27017',
-			"dbName": process.env.MONGO_LOGS_DBNAME || "odpLogs"
+			"dbName": process.env.MONGO_LOGS_DBNAME || "odpLogs",
+			"collection": process.env.MONGO_LOGS_COLLECTION || "counters"
 		},
 		"mongoReconnectiontime": process.env.MONGO_RECONN_TIME || "1000",
 		"mongoReconnectionRetries": process.env.MONGO_RECONN_TRIES || "1",
 		"mongooseOptions": {
-			"reconnectTries": process.env.MONGO_RECONN_TRIES,
-			"reconnectInterval": process.env.MONGO_RECONN_TIME,
+			"reconnectTries": process.env.MONGO_RECONN_TRIES || "1",
+			"reconnectInterval": process.env.MONGO_RECONN_TIME || "500",
 			"dbName": process.env.MONGO_AUTHOR_DBNAME || 'odpConfig',
 			"useNewUrlParser": true
 		},
