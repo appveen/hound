@@ -1,7 +1,8 @@
 #!/bin/bash
 TAG=$(date +%Y.%m.%d.%H.%M)
 
-env GOOS=linux GOARCH=386 go build -ldflags="-s -w" -o hound .
+# env GOOS=linux GOARCH=386 go build -ldflags="-s -w" -o hound .
+env GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o hound
 
 chmod +x hound
 
