@@ -16,6 +16,19 @@ spec:
       containers:
         - name: hound
           image: '__docker_registry_server__/appveen:hound.1.0.0'
+          env:
+            - name: MONGO_AUTHOR_DBNAME 
+              value: "odpConfig"
+            - name: MONGO_APPCENTER_DBNAME 
+              value: "appveen-adam"
+            - name: MONGO_LOGS_DBNAME 
+              value: "odpLogs"
+            - name: MONGO_AUTHOR_COLLECTION 
+              value: "counters"
+            - name: MONGO_APPCENTER_COLLECTION 
+              value: "counters"
+            - name: MONGO_LOGS_COLLECTION 
+              value: "counters"
           envFrom:
           - configMapRef:
               name: config
