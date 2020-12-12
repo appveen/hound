@@ -14,4 +14,6 @@ COPY lib /app/lib
 COPY hound /app
 COPY run.sh /app
 
-CMD ./run.sh
+ENTRYPOINT ["/app/run.sh"]
+
+CMD [ "node" ]
