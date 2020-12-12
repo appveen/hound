@@ -1,2 +1,2 @@
 node app.js
-# ./hound
+./hound

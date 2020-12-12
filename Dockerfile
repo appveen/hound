@@ -11,6 +11,7 @@ RUN npm install --production
 COPY app.js /app
 COPY config.js /app
 COPY lib /app/lib
+COPY hound /app
 COPY run.sh /app
 
 CMD ./run.sh
