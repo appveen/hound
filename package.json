@@ -1,0 +1,25 @@
+{
+  "name": "hound",
+  "version": "1.0.0",
+  "description": "To diagnose any connection related issues.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appveen/hound.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/appveen/hound/issues"
+  },
+  "homepage": "https://github.com/appveen/hound#readme",
+  "dependencies": {
+    "log4js": "^6.3.0",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.11.7"
+  }
+}
