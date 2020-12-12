@@ -1,4 +1,6 @@
 #!/bin/sh
-ls -l
+# set -e 
+# pwd
+# ls -l
 node app.js
-./hound
+# ./hound
