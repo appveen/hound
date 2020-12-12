@@ -11,6 +11,7 @@ global.logger = log
 let mongo = require("./lib/mongo.lib")
 let mongoose = require("./lib/mongoose.lib")
 let mongoUtil = require("./lib/mongoUtil.lib")
+let mongoUtilNew = require("./lib/mongoUtilNew.lib")
 
 async function start() {
 	// check the default values in config.js also.
@@ -25,6 +26,7 @@ async function start() {
 	await mongo.test()
 	await mongoose.test()
 	await mongoUtil.test()
+	await mongoUtilNew.test()
 
 	log.info("END OF MONGO TESTS")
 
